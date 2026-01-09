@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ginger Games</title>
+    <style>
+        /* Design Minimaliste & Dark Mode */
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #ffffff;
+            --accent-color: #ff9f43; /* Une touche "Ginger" */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #aaaaaa;
+            margin-bottom: 3rem;
+        }
+
+        /* Carte du jeu */
+        .game-card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            max-width: 350px;
+            width: 90%;
+            transition: transform 0.2s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            background-color: #333; /* Remplacer par ton icône */
+            border-radius: 22px;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+
+        h2 {
+            margin: 0.5rem 0;
+            font-size: 1.5rem;
+        }
+
+        p {
+            color: #cccccc;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Bouton App Store Officiel */
+        .app-store-btn {
+            display: inline-block;
+            transition: opacity 0.2s;
+        }
+        
+        .app-store-btn:hover {
+            opacity: 0.8;
+        }
+
+        .app-store-btn img {
+            height: 50px;
+        }
+
+        footer {
+            margin-top: 4rem;
+            font-size: 0.8rem;
+            color: #555;
+        }
+        
+        a { color: inherit; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ginger Games</h1>
+        <div class="subtitle">Mobile Game Studio</div>
+    </header>
+
+    <div class="game-card">
+        <img src="images/Icon.png" alt="Minesweeper Revive Icon" class="app-icon">
+        
+        <h2>Minesweeper Revive</h2>
+        <p>Redécouvrez le classique.<br>Simple. Moderne. Addictif.</p>
+
+        <a href="https://apps.apple.com/fr/app/minesweeper-revive/id6757098643" class="app-store-btn" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store">
+        </a>
+    </div>
+
+    <footer>
+        &copy; 2025 Ginger Games. Tous droits réservés.
+    </footer>
+
+</body>
+</html>
