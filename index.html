@@ -12,7 +12,6 @@
             --text-color: #ffffff;
             --accent-color: #ff9f43; /* Une touche "Ginger" */
         }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
@@ -25,17 +24,27 @@
             min-height: 100vh;
             text-align: center;
         }
-
         h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
             font-weight: 700;
         }
-
         .subtitle {
             font-size: 1.1rem;
             color: #aaaaaa;
             margin-bottom: 3rem;
+        }
+        
+        /* Conteneur pour aligner plusieurs jeux */
+        .games-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            width: 100%;
+            max-width: 800px;
+            padding: 0 1rem;
+            box-sizing: border-box;
         }
 
         /* Carte du jeu */
@@ -45,14 +54,12 @@
             border-radius: 20px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             max-width: 350px;
-            width: 90%;
+            width: 100%;
             transition: transform 0.2s ease;
         }
-
         .game-card:hover {
             transform: translateY(-5px);
         }
-
         .app-icon {
             width: 100px;
             height: 100px;
@@ -61,19 +68,16 @@
             margin-bottom: 1rem;
             object-fit: cover;
         }
-
         h2 {
             margin: 0.5rem 0;
             font-size: 1.5rem;
         }
-
         p {
             color: #cccccc;
             font-size: 0.95rem;
             line-height: 1.5;
             margin-bottom: 1.5rem;
         }
-
         /* Bouton App Store Officiel */
         .app-store-btn {
             display: inline-block;
@@ -83,41 +87,47 @@
         .app-store-btn:hover {
             opacity: 0.8;
         }
-
         .app-store-btn img {
             height: 50px;
         }
-
         footer {
             margin-top: 4rem;
             font-size: 0.8rem;
             color: #555;
+            padding-bottom: 2rem;
         }
         
         a { color: inherit; text-decoration: none; }
     </style>
 </head>
 <body>
-
     <header>
         <h1>Ginger Games</h1>
         <div class="subtitle">Mobile Game Studio</div>
     </header>
 
-    <div class="game-card">
-        <img src="images/Icon.png" alt="Minesweeper Revive Icon" class="app-icon">
-        
-        <h2>Minesweeper Revive</h2>
-        <p>Redécouvrez le classique.<br>Simple. Moderne. Addictif.</p>
+    <div class="games-container">
+        <div class="game-card">
+            <img src="images/Icon.png" alt="Minesweeper Revive Icon" class="app-icon">
+            <h2>Minesweeper Revive</h2>
+            <p>Redécouvrez le classique.<br>Simple. Moderne. Addictif.</p>
+            <a href="https://apps.apple.com/fr/app/minesweeper-revive/id6757098643" class="app-store-btn" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store">
+            </a>
+        </div>
 
-        <a href="https://apps.apple.com/fr/app/minesweeper-revive/id6757098643" class="app-store-btn" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store">
-        </a>
+        <div class="game-card">
+            <img src="images/Icon-Store-1024.png" alt="Free the Grid Icon" class="app-icon">
+            <h2>Free the Grid</h2>
+            <p>Libérez la grille.<br>Un nouveau puzzle captivant.</p>
+            <a href="https://apps.apple.com/us/app/free-the-grid/id6760897378" class="app-store-btn" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store">
+            </a>
+        </div>
     </div>
 
     <footer>
         &copy; 2025 Ginger Games. Tous droits réservés.
     </footer>
-
 </body>
 </html>
